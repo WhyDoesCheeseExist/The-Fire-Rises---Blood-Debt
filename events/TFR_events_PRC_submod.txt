@@ -1,0 +1,189 @@
+add_namespace = china_BD
+add_namespace = china_BD_news
+#Taiwan Invasion Preparations
+country_event = {
+	id = china_BD.1
+	title = china_BD.1.t
+	desc = china_BD.1.d
+	picture = GFX_Crazy_Guy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = china_BD.1.a
+		add_party_popularity = {
+			ideology = national_socialism
+			popularity = 0.01
+		}
+		custom_effect_tooltip = PRC_third_republic_coming_tt
+		hidden_effect = {
+			country_event = {
+				id = china_BD.2
+				days = 100
+				random_days = 20
+			}
+		}
+	}
+}
+country_event = {
+	id = china_BD.2
+	title = china_BD.2.t
+	desc = china_BD.2.d
+	picture = GFX_Crazy_Guy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = china_BD.2.a
+		ai_chance = {
+			factor = 100
+		}
+		add_political_power = -40
+		add_war_support = -0.01
+	}
+	option = {
+		name = china_BD.2.b
+		ai_chance = {
+			factor = 0
+		}
+		set_party_name = {
+			ideology = national_socialism
+			long_name = PRC_NS_BD_Long_party_name
+			name = PRC_NS_BD_short_party_name
+		}
+		promote_character = {
+			id = PRC_Zhou_Mingfeng
+			ideology = national_socialism
+		}
+		add_party_popularity = {
+			ideology = national_socialism
+			popularity = 0.03
+		}
+		custom_effect_tooltip = PRC_third_republic_coming_accepted_tt
+		custom_effect_tooltip = PRC_unlock_using_the_extremist_tt
+		set_country_flag = PRC_total_han_victory
+	}
+}
+country_event = {
+	id = china_BD.3
+	title = china_BD.3.t
+	desc = china_BD.3.d
+	picture = GFX_Crazy_Guy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = china_BD.3.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = PRC_you_are_coward_tt
+		add_political_power = 10
+	}
+	option = {
+		name = china_BD.3.b
+		ai_chance = {
+			factor = 0
+		}
+		add_party_popularity = {
+			ideology = national_socialism
+			popularity = 0.03
+		}
+		add_political_power = -40
+		custom_effect_tooltip = PRC_buckle_in_lmao_tt
+		custom_effect_tooltip = PRC_final_warning_tt
+	}
+}
+country_event = {
+	id = china_BD.4
+	title = china_BD.4.t
+	desc = china_BD.4.d
+	picture = GFX_Crazy_Guy
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		check_variable = {NS_group_power = 3}
+	}
+	option = {
+		name = china_BD.4.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = PRC_now_manage_this_shit_tt
+		unlock_decision_category_tooltip = PRC_BD_faction_system
+		set_country_flag = PRC_NS_faction_unlock
+		activate_mission = PRC_growing_gov_sus
+	}
+}
+country_event = {
+	id = china_BD.5
+	title = china_BD.5.t
+	desc = china_BD.5.d
+	picture = GFX_Crazy_Guy
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+	play_song = "TFR_BD_NS_RISE"	
+	}
+	option = {
+		name = china_BD.5.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = PRC_NS_in_power
+		set_politics = {
+				ruling_party = national_socialist
+				elections_allowed = no
+			}
+		custom_effect_tooltip = PRC_Blood_Debt_Begin_Repay
+		add_ideas = PRC_mass_resistance
+		add_ideas = PRC_third_republic_prep 
+		add_ideas = PRC_isolated_nation
+		news_event = {
+			id = china_BD_news.1
+		}
+		hidden_effect = {
+			set_popularities = {
+				totalitarian_socialist = 8
+				communist = 12
+				libertarian_socialist = 2
+				social_democrat = 5
+				social_liberal = 3
+				market_liberal = 0
+				conservative = 3
+				authoritarian_democrat = 2
+				nationalist = 5
+				fascist = 17
+				national_socialist = 43
+			}
+			set_temp_variable = {
+				coalition_partner_var_temp = token:fascist
+			}
+			add_to_coalition = yes
+			set_temp_variable = {
+				coalition_partner_var_temp = token:totalitarian_socialist
+			}
+			add_to_coalition = yes
+
+		}
+	}
+}
+#NatSoc take over China
+news_event = {
+	id = china_BD_news.1
+	title = china_BD_news.1.t
+	desc = china_BD_news.1.d
+	picture = GFX_very_bad_news_BD
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			NOT = {
+				original_tag = PRC
+		}
+		}
+		name = china_BD_news.1.a
+	}
+	option = {
+		trigger = {
+				original_tag = PRC
+		}
+		name = china_BD_news.1.b
+	}
+}

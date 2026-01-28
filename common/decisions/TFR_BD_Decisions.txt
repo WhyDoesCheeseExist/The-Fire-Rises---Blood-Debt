@@ -1,0 +1,194 @@
+PRC_BD_faction_system = {
+PRC_growing_gov_sus_mission = {
+		icon = generic_coronavirus
+		allowed = {
+			tag = PRC
+		}
+		activation = {
+			always = no
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRC_Avenge_The_Blood_Debt_tt
+				has_country_flag = PRC_Avenge_The_Blood_Debt
+			}
+			}
+		complete_effect = {
+			country_event = {
+				id = china_BD.5
+			}
+			remove_mission = PRC_growing_gov_sus_mission
+			clr_country_flag = PRC_NS_faction_unlock
+		}	
+		is_good = no
+		selectable_mission = no
+		days_mission_timeout = 30
+		timeout_effect = {
+			PRC_BD_gov_sus_grow = yes
+			activate_mission = PRC_growing_gov_sus
+		}
+}
+PRC_use_the_internet = {
+		icon = generic_coronavirus
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRC_DB_op_not_ongoing_tt
+				NOT = {
+				has_country_flag = PRC_DB_op_ongoing
+			}
+			}
+		}
+		cost = 15
+		days_mission_timeout = 21
+		modifier = {
+			national_socialist_drift = 0.01
+		}
+		complete_effect = {
+			set_country_flag = PRC_DB_op_ongoing
+		}
+		timeout_effect = {
+			PRC_BD_NS_grow = yes
+			clr_country_flag = PRC_DB_op_ongoing
+			add_party_popularity = {
+				ideology = national_socialism
+				popularity = 0.04
+			}
+		}
+}
+PRC_protect_civilian_han = {
+		icon = generic_coronavirus
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRC_DB_op_not_ongoing_tt
+				NOT = {
+				has_country_flag = PRC_DB_op_ongoing
+			}
+			}
+		}
+		cost = 50
+		days_mission_timeout = 14
+		modifier = {
+			national_socialist_drift = 0.001
+		}
+		complete_effect = {
+			if = {
+			check_variable = {PRC_BD_group = 1}	
+			add_manpower = -500 
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 2}
+			add_manpower = -1000
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 3}
+			manpower = -5000
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 4}
+			manpower = -25000
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 5}
+			manpower = -100000
+			}
+			else = {
+			manpower = -200
+			}
+			set_country_flag = PRC_DB_op_ongoing
+		}
+		timeout_effect = {
+			if = {
+			check_variable = {PRC_BD_group = 1}	
+			add_manpower = 500 
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 2}
+			add_manpower = 1000
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 3}
+			manpower = 5000
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 4}
+			manpower = 25000
+			}
+			else_if = {
+			check_variable = {PRC_BD_group = 5}
+			manpower = 100000
+			}
+			else = {
+			manpower = 200
+			}
+			custom_effect_tooltip = whitespace_tt
+			PRC_BD_NS_grow = yes
+			clr_country_flag = PRC_DB_op_ongoing
+			add_party_popularity = {
+				ideology = national_socialism
+				popularity = 0.07
+			}
+		}
+}
+PRC_entice_the_broken = {
+		icon = generic_coronavirus
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRC_DB_op_not_ongoing_tt
+				NOT = {
+				has_country_flag = PRC_DB_op_ongoing
+			}
+			}
+		}
+		cost = 100
+		days_mission_timeout = 7
+		modifier = {
+			national_socialist_drift = 0.01
+		}
+		complete_effect = {
+			set_country_flag = PRC_DB_op_ongoing
+			}
+		timeout_effect = {
+			PRC_BD_NS_grow = yes
+			clr_country_flag = PRC_DB_op_ongoing
+			add_party_popularity = {
+				ideology = national_socialism
+				popularity = 0.1
+		}
+	}
+}
+PRC_afraid_eyes_but_hands = {
+		icon = generic_coronavirus
+		allowed = {
+			tag = PRC
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PRC_DB_op_not_ongoing_tt
+				NOT = {
+				has_country_flag = PRC_DB_op_ongoing
+			}
+			}
+		}
+		cost = 30
+		days_mission_timeout = 21
+		modifier = {
+			political_power_cost = 0.15
+		}
+		complete_effect = {
+			set_country_flag = PRC_DB_op_ongoing
+			}
+		timeout_effect = {
+			PRC_BD_gov_not_sus = yes
+			clr_country_flag = PRC_DB_op_ongoing		
+	}
+}
+}
