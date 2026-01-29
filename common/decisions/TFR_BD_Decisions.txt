@@ -5,7 +5,7 @@ PRC_growing_gov_sus_mission = {
 			tag = PRC
 		}
 		activation = {
-			always = no
+			has_country_flag = PRC_NS_faction_unlock
 		}
 		available = {
 			custom_trigger_tooltip = {
@@ -14,18 +14,18 @@ PRC_growing_gov_sus_mission = {
 			}
 			}
 		complete_effect = {
-			country_event = {
-				id = china_BD.5
-			}
-			remove_mission = PRC_growing_gov_sus_mission
-			clr_country_flag = PRC_NS_faction_unlock
+		custom_effect_tooltip = manchu_gone_lol_tt
+		hidden_effect = {
+		remove_mission = PRC_growing_gov_sus_mission
+		clr_country_flag = PRC_NS_faction_unlock	
+		}
 		}	
 		is_good = no
 		selectable_mission = no
-		days_mission_timeout = 30
+		days_mission_timeout = var_days_BD
 		timeout_effect = {
 			PRC_BD_gov_sus_grow = yes
-			activate_mission = PRC_growing_gov_sus
+			activate_mission = PRC_growing_gov_sus_mission
 		}
 }
 PRC_use_the_internet = {
@@ -42,20 +42,20 @@ PRC_use_the_internet = {
 			}
 		}
 		cost = 15
-		days_mission_timeout = 21
+		days_remove = 21
 		modifier = {
 			national_socialist_drift = 0.01
 		}
 		complete_effect = {
 			set_country_flag = PRC_DB_op_ongoing
 		}
-		timeout_effect = {
+		remove_effect = {
 			PRC_BD_NS_grow = yes
 			clr_country_flag = PRC_DB_op_ongoing
-			add_party_popularity = {
-				ideology = national_socialism
-				popularity = 0.04
-			}
+				add_popularity = {
+					ideology = national_socialist
+					popularity = 0.04
+				}
 		}
 }
 PRC_protect_civilian_han = {
@@ -72,66 +72,93 @@ PRC_protect_civilian_han = {
 			}
 		}
 		cost = 50
-		days_mission_timeout = 14
+		days_remove = 14
 		modifier = {
-			national_socialist_drift = 0.001
+			national_socialist_drift = 0.01
 		}
 		complete_effect = {
 			if = {
-			check_variable = {PRC_BD_group = 1}	
+			check_variable = {PRC_BD_group = 2}	
 			add_manpower = -500 
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 2}
+			check_variable = {PRC_BD_group = 4}
 			add_manpower = -1000
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 3}
-			manpower = -5000
+			check_variable = {PRC_BD_group = 6}
+			add_manpower = -5000
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 4}
-			manpower = -25000
+			check_variable = {PRC_BD_group = 8}
+			add_manpower = -25000
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 5}
-			manpower = -100000
+			check_variable = {PRC_BD_group = 9}
+			add_manpower = -100000
 			}
 			else = {
-			manpower = -200
+			add_manpower = -200
 			}
-			set_country_flag = PRC_DB_op_ongoing
-		}
-		timeout_effect = {
+	}
+		remove_effect = {
 			if = {
-			check_variable = {PRC_BD_group = 1}	
+			check_variable = {PRC_BD_group = 2}	
 			add_manpower = 500 
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 2}
+			check_variable = {PRC_BD_group = 4}
 			add_manpower = 1000
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 3}
-			manpower = 5000
+			check_variable = {PRC_BD_group = 6}
+			add_manpower = 5000
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 4}
-			manpower = 25000
+			check_variable = {PRC_BD_group = 8}
+			add_manpower = 25000
 			}
 			else_if = {
-			check_variable = {PRC_BD_group = 5}
-			manpower = 100000
+			check_variable = {PRC_BD_group = 9}
+			add_manpower = 100000
 			}
 			else = {
-			manpower = 200
+			add_manpower = 200
 			}
-			custom_effect_tooltip = whitespace_tt
+			if = {
+			limit = {			
+			has_country_flag = PRC_NS_boosted_gov
+			}
+			random_list = {
+        66 = {		
 			PRC_BD_NS_grow = yes
 			clr_country_flag = PRC_DB_op_ongoing
-			add_party_popularity = {
-				ideology = national_socialism
-				popularity = 0.07
+			custom_effect_tooltip = whitespace_tt
+				add_popularity = {
+					ideology = national_socialist
+					popularity = 0.05
+				}
+			}
+		33 = {
+		clr_country_flag = PRC_DB_op_ongoing	
+		add_popularity = {
+					ideology = national_socialist
+					popularity = 0.03
+				}
+		}
+	}
+	}
+		else_if = {
+			limit = {
+NOT = { has_country_flag = PRC_NS_boosted_gov }
+			}
+			PRC_BD_NS_grow = yes
+			clr_country_flag = PRC_DB_op_ongoing
+			custom_effect_tooltip = whitespace_tt
+				add_popularity = {
+					ideology = national_socialist
+					popularity = 0.05
+				}
 			}
 		}
 }
@@ -149,21 +176,44 @@ PRC_entice_the_broken = {
 			}
 		}
 		cost = 100
-		days_mission_timeout = 7
+		days_remove = 21
 		modifier = {
 			national_socialist_drift = 0.01
 		}
 		complete_effect = {
 			set_country_flag = PRC_DB_op_ongoing
 			}
-		timeout_effect = {
+		remove_effect = {
+			if = {
+				has_country_flag = PRC_NS_boosted_recruits
+		random_list = {
+		80 = {	
 			PRC_BD_NS_grow = yes
 			clr_country_flag = PRC_DB_op_ongoing
-			add_party_popularity = {
-				ideology = national_socialism
+				add_popularity = {
+					ideology = national_socialist
+					popularity = 0.1
+				}
+			}
+			20 = {
+			clr_country_flag = PRC_DB_op_ongoing
+			custom_effect_tooltip = whitespace_tt
+				add_popularity = {
+					ideology = national_socialist
+					popularity = 0.1
+				}
+	}
+	}
+	}
+	else = {
+	PRC_BD_NS_grow = yes
+			clr_country_flag = PRC_DB_op_ongoing
+			add_popularity = {
+				ideology = national_socialist
 				popularity = 0.1
 		}
 	}
+}
 }
 PRC_afraid_eyes_but_hands = {
 		icon = generic_coronavirus
@@ -179,14 +229,14 @@ PRC_afraid_eyes_but_hands = {
 			}
 		}
 		cost = 30
-		days_mission_timeout = 21
+		days_remove = 21
 		modifier = {
 			political_power_cost = 0.15
 		}
 		complete_effect = {
 			set_country_flag = PRC_DB_op_ongoing
 			}
-		timeout_effect = {
+		remove_effect = {
 			PRC_BD_gov_not_sus = yes
 			clr_country_flag = PRC_DB_op_ongoing		
 	}

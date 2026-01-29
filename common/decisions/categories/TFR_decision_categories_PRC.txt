@@ -631,6 +631,7 @@ PRC_science_project_mind_and_skills = {
 }
 PRC_BD_faction_system = {
     icon = GFX_PRC_MSS_science_triumph_cat
+	 picture = GFX_NS_faction_bannerNS_Faction
     visible_when_empty = yes
     priority = 1
 
@@ -640,6 +641,5 @@ PRC_BD_faction_system = {
 
     visible = {
         has_country_flag = PRC_NS_faction_unlock
-        always = no
     }
 }

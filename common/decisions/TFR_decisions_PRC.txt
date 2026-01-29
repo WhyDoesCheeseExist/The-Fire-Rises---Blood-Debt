@@ -8554,7 +8554,7 @@ PRC_the_dawn_of_han_nationalism_cat = {
 		national_socialist_drift = 0.01
 		war_support_weekly = 0.01
 		}
-		complete_effect = {
+		remove_effect = {
 			if ={
 				limit = {
 				has_country_flag = NS_gangs_allowed	

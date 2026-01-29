@@ -1,6 +1,6 @@
 add_namespace = china_BD
 add_namespace = china_BD_news
-#Taiwan Invasion Preparations
+#Blood Debt content begins
 country_event = {
 	id = china_BD.1
 	title = china_BD.1.t
@@ -10,11 +10,10 @@ country_event = {
 	fire_only_once = yes
 	option = {
 		name = china_BD.1.a
-		add_party_popularity = {
+		add_popularity = {
 			ideology = national_socialism
 			popularity = 0.01
 		}
-		custom_effect_tooltip = PRC_third_republic_coming_tt
 		hidden_effect = {
 			country_event = {
 				id = china_BD.2
@@ -24,6 +23,7 @@ country_event = {
 		}
 	}
 }
+#Woah no longer just online...
 country_event = {
 	id = china_BD.2
 	title = china_BD.2.t
@@ -53,15 +53,16 @@ country_event = {
 			id = PRC_Zhou_Mingfeng
 			ideology = national_socialism
 		}
-		add_party_popularity = {
+		add_popularity = {
 			ideology = national_socialism
 			popularity = 0.03
 		}
 		custom_effect_tooltip = PRC_third_republic_coming_accepted_tt
-		custom_effect_tooltip = PRC_unlock_using_the_extremist_tt
+		custom_decision_tooltip = PRC_BD_utilise_NS_hans
 		set_country_flag = PRC_total_han_victory
 	}
 }
+#Last Warning
 country_event = {
 	id = china_BD.3
 	title = china_BD.3.t
@@ -82,7 +83,7 @@ country_event = {
 		ai_chance = {
 			factor = 0
 		}
-		add_party_popularity = {
+		add_popularity = {
 			ideology = national_socialism
 			popularity = 0.03
 		}
@@ -91,6 +92,7 @@ country_event = {
 		custom_effect_tooltip = PRC_final_warning_tt
 	}
 }
+#NatSoc Faction Unlocks
 country_event = {
 	id = china_BD.4
 	title = china_BD.4.t
@@ -108,10 +110,25 @@ country_event = {
 		}
 		custom_effect_tooltip = PRC_now_manage_this_shit_tt
 		unlock_decision_category_tooltip = PRC_BD_faction_system
+		activate_mission = PRC_growing_gov_sus_mission
 		set_country_flag = PRC_NS_faction_unlock
-		activate_mission = PRC_growing_gov_sus
+		hidden_effect = {
+			set_variable = {
+				var = var_days_BD
+				value = 30
+			}
+			set_variable = {
+				var = BD_Gov_Awareness
+				value = 2
+			}
+			set_variable = {
+				var = BD_lotus_bloom
+				value = 1
+			}
+		}
 	}
 }
+#You did it, awesome sauce
 country_event = {
 	id = china_BD.5
 	title = china_BD.5.t
@@ -165,6 +182,65 @@ country_event = {
 		}
 	}
 }
+#Gov found you out!
+country_event = {
+	id = china_BD.6
+	title = china_BD.6.t
+	desc = china_BD.6.d
+	picture = GFX_Crazy_Guy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = china_BD.6.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = PRC_BD_you_lose_womp_womp_tt
+		add_political_power = -100
+		add_stability = -0.1
+		add_war_support = -0.15
+		set_country_flag = PRC_gov_finds_out_BD
+		add_popularity = {
+			ideology = national_socialism
+			popularity = -1
+		}
+		news_event = {
+			id = china_BD_news.2
+		}
+	}
+}
+#Focus on Recruits, or Focus on da Gov?
+country_event = {
+	id = china_BD.6
+	title = china_BD.6.t
+	desc = china_BD.6.d
+	picture = GFX_Crazy_Guy
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #Recruits...
+		name = china_BD.6.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = PRC_BD_recruit_boosted
+		set_country_flag = PRC_NS_boosted_recruits
+	}
+	option = { #Gov...
+		name = china_BD.6.b
+		ai_chance = {
+			factor = 0
+		}
+		custom_effect_tooltip = PRC_BD_Gov_boosted
+		custom_effect_tooltip = PRC_BD_less_chance_it_works
+		set_country_flag = PRC_NS_boosted_gov
+		hidden_effect = {
+			set_variable = {
+				var = var_days_BD
+				value = 21
+			}
+		}
+	}
+}
 #NatSoc take over China
 news_event = {
 	id = china_BD_news.1
@@ -185,5 +261,16 @@ news_event = {
 				original_tag = PRC
 		}
 		name = china_BD_news.1.b
+	}
+}
+#NatSoc are discovered and destroyed by Gov
+china_BD_news.2 = {
+	id = china_BD_news.2
+	title = china_BD_news.2.t
+	desc = china_BD_news.2.d
+	picture = GFX_very_bad_news_BD
+	is_triggered_only = yes
+	option = {
+		name = china_BD_news.2.a
 	}
 }

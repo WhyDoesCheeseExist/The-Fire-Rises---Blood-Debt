@@ -1,0 +1,155 @@
+##################################
+####    PRC BD Scripted Effects   ####
+##################################
+
+PRC_BD_gov_sus_grow = {
+	custom_effect_tooltip = PRC_BD_uh_oh_gov_sus_tt
+	clamp_variable = {
+	var = PRC_gov_sus
+	min = 0
+	max = 10
+	}
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = PRC_gov_finds_out_BD
+				}
+			}
+			if = {
+			has_country_flag = PRC_NS_boosted_gov
+				80 = {
+					limit = { }
+					add_to_variable = {
+						var = PRC_gov_sus
+						value = 1
+					}
+			 }
+				20 = {
+					limit = { }
+					add_to_variable = {
+						var = PRC_gov_sus
+						value = 1
+					}
+					add_to_variable = {
+						var = PRC_NS_gang_power
+						value = -1
+					}
+			 }			 
+			}			
+		else = {
+		random_list = {
+				50 = {
+					limit = { }
+					add_to_variable = {
+						var = PRC_gov_sus
+						value = 1
+					}
+			 }
+				50 = {
+					limit = { }
+					add_to_variable = {
+						var = PRC_gov_sus
+						value = 1
+					}
+					add_to_variable = {
+						var = PRC_NS_gang_power
+						value = -1
+					}
+			 }			 
+			}
+		}	
+}
+
+			if = {
+				limit = {
+					check_variable = {
+						var = PRC_gov_sus
+						value = 10
+						compare = greater_than_or_equals
+					}
+				}
+				PRC = {
+					country_event = { id = PRC_BD.6 }
+				}
+			}
+}
+PRC_BD_NS_grow = {
+custom_effect_tooltip = PRC_BD_NS_Gang_Grow_tt	
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = PRC_gov_finds_out_BD
+				}
+			}
+						clamp_variable = {
+				var = PRC_NS_gang_power
+				min = 0
+				max = 10
+			}
+			add_to_variable = {
+				var = PRC_NS_gang_power
+				value = 1
+			}
+
+			if = {
+				limit = {
+					check_variable = {
+						var = PRC_NS_gang_power
+						value = 10
+						compare = greater_than_or_equals
+					}
+				}
+				PRC = {
+					country_event = { id = china_BD.5 }
+				}
+			}
+		}
+}
+PRC_BD_gov_not_sus = {
+custom_effect_tooltip = PRC_BD_lower_sus_tt
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = PRC_gov_finds_out_BD
+				}
+			}
+			if = {
+				has_country_flag = PRC_NS_boosted_gov
+				random_list = {
+				66 = {
+			add_to_variable = {
+				var = PRC_gov_sus
+				value = -2
+					}
+				}
+				33 = {
+			add_to_variable = {
+				var = PRC_gov_sus
+				value = -1
+						}
+					}				
+				}
+		 
+			}
+			else = {
+			add_to_variable = {
+				var = PRC_gov_sus
+				value = -1
+				}
+
+			}
+		}
+
+			if = {
+				limit = {
+					check_variable = {
+						var = PRC_gov_sus
+						value = 10
+						compare = greater_than_or_equals
+					}
+				}
+				PRC = {
+					country_event = { id = PRC_BD.6 }
+				}
+			}
+		}

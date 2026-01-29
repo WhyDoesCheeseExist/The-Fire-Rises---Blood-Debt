@@ -1,0 +1,204 @@
+defined_text = {
+    name = NS_groups_current_status
+    text = {
+        trigger = {
+            has_country_flag = NS_gangs_allowed	
+        }
+        localization_key = NS_group_matter
+    }
+    text = {
+        localization_key = NS_group_not_matter
+    }
+}
+defined_text = {
+    name = BD_Lotus_Bloom_lvl
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 10
+            }
+        }
+        localization_key = BD_lotus_bloom_10
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 9
+            }
+        }
+        localization_key = BD_lotus_bloom_9
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 8
+            }
+        }
+        localization_key = BD_lotus_bloom_8
+    } 
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 7
+            }
+        }
+        localization_key = BD_lotus_bloom_7
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 6
+            }
+        }
+        localization_key = BD_lotus_bloom_6
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 5
+            }
+        }
+        localization_key = BD_lotus_bloom_5
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 4
+            }
+        }
+        localization_key = BD_lotus_bloom_4
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 3
+            }
+        }
+        localization_key = BD_lotus_bloom_3
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 2
+            }
+        }
+        localization_key = BD_lotus_bloom_2
+    }
+    text = {   
+        trigger = {
+            check_variable = {
+                var = BD_lotus_bloom
+                value = 1
+            }
+        }
+        localization_key = BD_lotus_bloom_1
+    }
+    text = {
+        localization_key = BD_lotus_bloom_0
+    }
+}
+defined_text = {
+    name = BD_Gov_Awareness_lvl
+       text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 10
+            }
+        }
+        localization_key = BD_Gov_Awareness_10
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 9
+            }
+        }
+        localization_key = BD_Gov_Awareness_9
+    }
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 8
+            }
+        }
+        localization_key = BD_Gov_Awareness_8
+    } 
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 7
+            }
+        }
+        localization_key = BD_Gov_Awareness_7
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 6
+            }
+        }
+        localization_key = BD_Gov_Awareness_6
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 5
+            }
+        }
+        localization_key = BD_Gov_Awareness_5
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 4
+            }
+        }
+        localization_key = BD_Gov_Awareness_4
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 3
+            }
+        }
+        localization_key = BD_Gov_Awareness_3
+    }    
+    text = {
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 2
+            }
+        }
+        localization_key = BD_Gov_Awareness_2
+    }
+    text = {   
+        trigger = {
+            check_variable = {
+                var = BD_Gov_Awareness
+                value = 1
+            }
+        }
+        localization_key = BD_Gov_Awareness_1
+    }
+    text = {
+        localization_key = BD_Gov_Awareness_0
+    }
+}
