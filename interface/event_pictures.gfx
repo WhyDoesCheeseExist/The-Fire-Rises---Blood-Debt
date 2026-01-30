@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_PRC_online_nationalsim"
+		texturefile = "gfx/event_pictures/PRC_online_nationalsim.png"
+	}
+
+	spriteType = {
+		name = "GFX_PRC_zhourising"
+		texturefile = "gfx/event_pictures/PRC_zhourising.png"
+	}
+}
