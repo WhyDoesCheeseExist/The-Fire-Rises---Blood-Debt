@@ -8,4 +8,19 @@ spriteTypes = {
 		name = "GFX_PRC_zhourising"
 		texturefile = "gfx/event_pictures/PRC_zhourising.png"
 	}
+
+	spriteType = {
+		name = "GFX_PRC_occupy_AFG"
+		texturefile = "gfx/event_pictures/PRC_occupy_AFG.png"
+	}
+
+	spriteType = {
+		name = "GFX_PRC_invade_AFG"
+		texturefile = "gfx/event_pictures/PRC_invade_AFG.png"
+	}
+
+	spriteType = {
+		name = "GFX_PRC_invade_AFG_news"
+		texturefile = "gfx/event_pictures/PRC_invade_AFG_news.png"
+	}
 }

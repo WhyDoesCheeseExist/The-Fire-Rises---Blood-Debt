@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_PRC_AFG_exploit_dem_gans"
+		texturefile = "gfx/interface/ideas/PRC/PRC_AFG_exploit_dem_gans.png"
+	}
+}
