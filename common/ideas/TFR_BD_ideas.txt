@@ -57,5 +57,68 @@
 					overlord_trade_cost_factor = -0.9
 				}
 			}
+			PRC_mass_resistance = {
+				#picture = GFX_idea_Exploitation_6#
+			    traits = {
+			        ZZZ_blank_idea_trait
+			    }
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+				
+				modifier = {
+					stability_factor = -0.5
+					war_support_factor = -0.3
+					stability_weekly = -0.03
+					war_support_weekly = -0.02
+					drift_defence_factor = -0.2
+					communism_drift = 0.03
+					libertarian_socialist_drift = 0.02
+					social_democrat_drift = 0.01
+					social_liberal_drift = 0.01
+					national_socialist_drift = -0.04
+					attrition = 0.1
+					society_development_monthly = -0.05
+					personal_value_factor = -0.1
+				}
+			}
+			PRC_isolated_nation = {
+				#picture = GFX_idea_Exploitation_6#
+			    traits = {
+			        ZZZ_blank_idea_trait
+			    }
+
+				allowed = {
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = yes
+				}
+
+				removal_cost = -1
+				
+				modifier = {
+					political_power_cost = -0.1
+					industrial_development_monthly = -0.1
+					farming_development_monthly = -0.1
+					business_value_factor = -0.15
+					production_lack_of_resource_penalty_factor = 0.25
+					production_factory_max_efficiency_factor = -0.15
+					industrial_capacity_factory = -0.3
+					production_speed_buildings_factor = -0.2
+					trade_opinion_factor = -1
+					opinion_gain_monthly_factor = -1
+					unit_upkeep_attrition_factor = 0.15
+				}
+			}
+									
 		}
 }

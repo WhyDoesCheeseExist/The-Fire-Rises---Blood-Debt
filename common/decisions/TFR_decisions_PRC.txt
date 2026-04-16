@@ -8583,11 +8583,15 @@ PRC_the_dawn_of_han_nationalism_cat = {
 		add_war_support = 0.03
 		add_popularity = {
    		 	ideology = communist
+    		popularity = 0.02
+		}
+				add_popularity = {
+   		 	ideology = national_socialist
     		popularity = 0.01
 		}
 		hidden_effect = {
 		country_event = {
-			id = china.BD.3
+			id = china_BD.2
 			days = 21	
 			}
 		}	

@@ -1,0 +1,18 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_lotus_text_icon"
+		texturefile = "gfx/texticons/lotus.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_eye_text_icon"
+		texturefile = "gfx/texticons/eye.png"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_NS_faction_text_icon"
+		texturefile = "gfx/interface/decisions/NS_Faction.png"
+		legacy_lazy_load = no
+	}
+}

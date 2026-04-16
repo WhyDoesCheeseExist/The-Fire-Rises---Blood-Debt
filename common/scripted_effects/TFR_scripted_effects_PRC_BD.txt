@@ -90,8 +90,19 @@ custom_effect_tooltip = PRC_BD_NS_Gang_Grow_tt
 				var = PRC_NS_gang_power
 				value = 1
 			}
-
-			if = {
+			else_if = {
+				limit = {
+					check_variable = {
+						var = PRC_NS_gang_power
+						value = 4
+						compare = greater_than_or_equals
+					}
+				}
+				PRC = {
+					country_event = { id = china_BD.7 }
+				}
+			}
+			else_if = {
 				limit = {
 					check_variable = {
 						var = PRC_NS_gang_power
@@ -112,9 +123,8 @@ custom_effect_tooltip = PRC_BD_lower_sus_tt
 				NOT = {
 					has_country_flag = PRC_gov_finds_out_BD
 				}
-			}
-			if = {
 				has_country_flag = PRC_NS_boosted_gov
+			}
 				random_list = {
 				66 = {
 			add_to_variable = {
@@ -137,19 +147,5 @@ custom_effect_tooltip = PRC_BD_lower_sus_tt
 				value = -1
 				}
 
-			}
 		}
-
-			if = {
-				limit = {
-					check_variable = {
-						var = PRC_gov_sus
-						value = 10
-						compare = greater_than_or_equals
-					}
-				}
-				PRC = {
-					country_event = { id = PRC_BD.6 }
-				}
-			}
 		}

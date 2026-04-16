@@ -169,7 +169,7 @@ PRC_national_peoples_congress_cat = {
     allowed = {
     	tag = PRC
     }
-	
+	 
     visible = {
         NOT = {
             has_global_flag = PRC_china_collapse
@@ -631,7 +631,7 @@ PRC_science_project_mind_and_skills = {
 }
 PRC_BD_faction_system = {
     icon = GFX_PRC_MSS_science_triumph_cat
-	 picture = GFX_NS_faction_bannerNS_Faction
+	 #picture = GFX_NS_faction_bannerNS_Faction
     visible_when_empty = yes
     priority = 1
 

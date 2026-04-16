@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_blackout_icon"
+		texturefile = "gfx\interface\goals\Purge_2.png"
+	}
+}

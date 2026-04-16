@@ -38,6 +38,7 @@ country_event = {
 		}
 		add_political_power = -40
 		add_war_support = -0.01
+		set_country_flag = strange_man_BEGONE
 	}
 	option = {
 		name = china_BD.2.b
@@ -103,6 +104,16 @@ country_event = {
 	trigger = {
 		check_variable = {NS_group_power = 3}
 	}
+	immediate = {
+		hidden_effect = {
+		activate_mission = PRC_growing_gov_sus_mission
+		set_country_flag = PRC_NS_faction_unlock
+		set_variable = {
+    	var = var_days_bd
+    	value = 0
+		}
+}
+	}
 	option = {
 		name = china_BD.4.a
 		ai_chance = {
@@ -110,20 +121,18 @@ country_event = {
 		}
 		custom_effect_tooltip = PRC_now_manage_this_shit_tt
 		unlock_decision_category_tooltip = PRC_BD_faction_system
-		activate_mission = PRC_growing_gov_sus_mission
-		set_country_flag = PRC_NS_faction_unlock
 		hidden_effect = {
 			set_variable = {
-				var = var_days_BD
-				value = 30
-			}
-			set_variable = {
-				var = BD_Gov_Awareness
+				var = PRC_gov_sus
 				value = 2
 			}
 			set_variable = {
-				var = BD_lotus_bloom
+				var = PRC_NS_gang_power
 				value = 1
+			}
+			add_to_variable = {
+				var = var_days_bd
+				value = 30
 			}
 		}
 	}
@@ -149,10 +158,27 @@ country_event = {
 				ruling_party = national_socialist
 				elections_allowed = no
 			}
+		set_party_name = {
+				ideology = national_socialist
+				long_name = PRC_NS_BD_Long_party_name
+				name = PRC_NS_BD_short_party_name
+			}
+		add_country_leader_role = {
+    		character = PRC_li_zuocheng
+    		promote_leader = yes
+    		country_leader = {
+       		ideology = palingenetic_ultra_nationalism
+        	expire = "2065.1.1.1"
+        	traits = { hos_desire_rise for_expansionist }
+    		}
+		}
+		set_cosmetic_tag = PRC_NS_china_initial
 		custom_effect_tooltip = PRC_Blood_Debt_Begin_Repay
-		add_ideas = PRC_mass_resistance
-		add_ideas = PRC_third_republic_prep 
-		add_ideas = PRC_isolated_nation
+		add_ideas = {
+		PRC_mass_resistance
+		PRC_isolated_nation
+		PRC_third_republic_prep 
+		}
 		news_event = {
 			id = china_BD_news.1
 		}
@@ -211,34 +237,33 @@ country_event = {
 }
 #Focus on Recruits, or Focus on da Gov?
 country_event = {
-	id = china_BD.6
-	title = china_BD.6.t
-	desc = china_BD.6.d
+	id = china_BD.7
+	title = china_BD.7.t
+	desc = china_BD.7.d
 	picture = GFX_Crazy_Guy
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { #Recruits...
-		name = china_BD.6.a
+		name = china_BD.7.a
 		ai_chance = {
 			factor = 100
 		}
 		custom_effect_tooltip = PRC_BD_recruit_boosted
-		set_country_flag = PRC_NS_boosted_recruits
-	}
-	option = { #Gov...
-		name = china_BD.6.b
-		ai_chance = {
-			factor = 0
-		}
-		custom_effect_tooltip = PRC_BD_Gov_boosted
-		custom_effect_tooltip = PRC_BD_less_chance_it_works
 		set_country_flag = PRC_NS_boosted_gov
 		hidden_effect = {
-			set_variable = {
-				var = var_days_BD
-				value = 21
-			}
+		subtract_from_variable = {
+    		var = var_days_bd
+    		value = 9
+}
 		}
+	}
+	option = { #Gov...
+		name = china_BD.7.b
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = PRC_BD_Gov_boosted
+		set_country_flag = PRC_NS_boosted_recruits
 	}
 }
 ############

@@ -15,7 +15,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 10
             }
         }
@@ -24,7 +24,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 9
             }
         }
@@ -33,7 +33,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 8
             }
         }
@@ -42,7 +42,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 7
             }
         }
@@ -51,7 +51,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 6
             }
         }
@@ -60,7 +60,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 5
             }
         }
@@ -69,7 +69,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 4
             }
         }
@@ -78,7 +78,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 3
             }
         }
@@ -87,7 +87,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 2
             }
         }
@@ -96,7 +96,7 @@ defined_text = {
     text = {   
         trigger = {
             check_variable = {
-                var = BD_lotus_bloom
+                var = PRC_NS_gang_power
                 value = 1
             }
         }
@@ -111,7 +111,7 @@ defined_text = {
        text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 10
             }
         }
@@ -120,7 +120,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 9
             }
         }
@@ -129,7 +129,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 8
             }
         }
@@ -138,7 +138,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 7
             }
         }
@@ -147,7 +147,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 6
             }
         }
@@ -156,7 +156,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 5
             }
         }
@@ -165,7 +165,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 4
             }
         }
@@ -174,7 +174,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 3
             }
         }
@@ -183,7 +183,7 @@ defined_text = {
     text = {
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 2
             }
         }
@@ -192,7 +192,7 @@ defined_text = {
     text = {   
         trigger = {
             check_variable = {
-                var = BD_Gov_Awareness
+                var = PRC_gov_sus
                 value = 1
             }
         }

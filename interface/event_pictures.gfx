@@ -23,4 +23,9 @@ spriteTypes = {
 		name = "GFX_PRC_invade_AFG_news"
 		texturefile = "gfx/event_pictures/PRC_invade_AFG_news.png"
 	}
+
+	spriteType = {
+		name = "GFX_very_bad_news_BD"
+		texturefile = "gfx/event_pictures/PRC_TaoistMarch.png"
+	}
 }
