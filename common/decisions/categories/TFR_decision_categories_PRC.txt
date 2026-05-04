@@ -643,3 +643,17 @@ PRC_BD_faction_system = {
         has_country_flag = PRC_NS_faction_unlock
     }
 }
+PRC_BD_pax_sinofica = {
+    icon = GFX_PRC_pax_sinofica_iconPax_sinofica_China
+	picture = GFX_BD_pax_sinofica_decision_cat
+    visible_when_empty = yes
+    priority = 1
+
+    allowed = {
+        original_tag = PRC
+    }
+
+    visible = {
+        has_country_flag = PRC_BD_pax_sinofcica_unlock
+    }
+}

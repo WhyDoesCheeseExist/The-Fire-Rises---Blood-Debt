@@ -266,6 +266,23 @@ country_event = {
 		set_country_flag = PRC_NS_boosted_recruits
 	}
 }
+country_event = { #Pax Sinofica decision category unlocks
+	id = china_BD.99
+	title = china_BD.99.t
+	desc = china_BD.99.d
+	picture = GFX_BD_china_dominance
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = china_BD.99.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = PRC_BD_PS_decisions_unlocked
+		unlock_decision_category_tooltip = PRC_BD_pax_sinofica
+		set_country_flag = PRC_BD_pax_sinofcica_unlock
+	}
+}
 ############
 #AFGAN EVENTS
 ###################
@@ -362,7 +379,106 @@ country_event = {
 			}
 		}
 	}		
+##########
+### THIRD AFRICAN WAR EVENTS
+##########
+country_event = { #Third African War - support Ethiopia, duh
+	id = china_BD.102
+	title = china_BD.102.t
+	desc = china_BD.102.d
+	picture = GFX_BD_helpethiopia
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = china_BD.102.a
+		ai_chance = {
+			factor = 100
+		}
+		custom_effect_tooltip = PRC_BD_support_ETH_tt
+		set_country_flag = PRC_BD_ETH_interest
+	}
+}
+country_event = { #ohhh Ethiropria spent all money on dam...now we are homress...
+	id = china_BD.201
+	title = china_BD.201.t
+	desc = china_BD.201.d
+	picture = GFX_PRC_third_african_war
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = china_BD.201.a
+		ai_chance = {
+			factor = 100
+		}
+		ETH = {
+					set_cosmetic_tag = ETH_nat_china
+					add_ideas = {
+					ETH_company_with_state
+					}
+					set_politics = {
+						ruling_party = authoritarian_democrat
+						elections_allowed = no
+					}
+					set_party_name = {
+						ideology = authoritarian_democrat
+						long_name = "China Hydropower Construction Group Corporation"
+						name = "SinoHydro"
+					}
+					add_popularity = {
+						ideology = authoritarian_democrat
+						popularity = 0.50
+					}
+					create_country_leader = {
+					name = ETH_PRC_sinohydro_comp
+					desc = ""
+					picture = GFX_ETH_PRC_BOD
+					expire = "2099.1.1"
+					ideology = corporatocracy
+					traits = {
+						}
+					}
+				}
+		SOM = {
+					set_cosmetic_tag = SOM_nat_china
+					set_politics = {
+						ruling_party = nationalist
+						elections_allowed = no
+					}
+					set_party_name = {
+						ideology = nationalist
+						long_name = "Sino-Ethiopian Joint Occupation Force of Somalia"
+						name = "Sino-Ethiopian Forces"
+					}
+					add_popularity = {
+						ideology = nationalist
+						popularity = 0.50
+					}
+					create_country_leader = {
+					name = SOM_PRC_sino_ethiopian_forces
+					desc = ""
+					picture = GFX_SOM_PRC_BOD
+					expire = "2099.1.1"
+					ideology = military_junta
+					traits = {
+						}
+					}
 
+		}
+		PRC = {
+			add_to_faction = ETH
+			add_to_faction = SOM
+		set_autonomy = {
+   			target = SOM
+    		autonomous_state = autonomy_supervised_state
+			end_wars = no
+    		end_civil_wars = no
+			}
+		}
+				news_event = {
+					id = china_BD_news.4
+				}
+	}
+}
 #NatSoc take over China
 news_event = {
 	id = china_BD_news.1
@@ -417,4 +533,112 @@ news_event = {
 		}
 		name = china_BD_news.3.b
 	}
+}
+#Chinese corporations overthrow Ethiopian government
+news_event = {
+	id = china_BD_news.4
+	title = china_BD_news.4.t
+	desc = china_BD_news.4.d
+	picture = GFX_PRC_invade_AFG_news
+	is_triggered_only = yes
+	option = {
+		trigger = {
+			NOT = {
+				original_tag = PRC
+		}
+		}
+		name = china_BD_news.4.a
+	}
+	option = {
+		trigger = {
+				original_tag = PRC
+		}
+		name = china_BD_news.4.b
+	}
+}
+news_event = { #EAF Victory - EAF invades Congo
+	id = china_BD_news.4
+	title = china_BD_news.4.t
+	desc = china_BD_news.4.d
+	picture = GFX_BD_rcg_eaf_war
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = china_BD_news.4.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			NOT = {
+				original_tag = PRC
+		}
+		}
+		}
+	option = {
+		trigger = {
+				original_tag = PRC
+		}
+		custom_effect_tooltip = PRC_BD_support_RCG_tt
+		set_country_flag = PRC_BD_RCG_interest
+		name = china_BD_news.4.b
+	}
+}
+news_event = { #RCG-EAF War - RCG victory
+	id = china_BD_news.5
+	title = china_BD_news.5.t
+	desc = china_BD_news.5.d
+	picture = GFX_BD_actualrcgwin
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = china_BD_news.5.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			NOT = {
+				original_tag = PRC
+		}
+		}
+		}
+	option = {
+		trigger = {
+				original_tag = PRC
+		}
+		PRC = {
+		swap_ideas = {
+		 remove_idea = PRC_BD_EAF_victory_fake
+    		add_idea = PRC_BD_EAF_RCG_victory_fake
+		}
+		name = china_BD_news.5.b
+	}
+}
+}
+country_event = { #RCG-EAF War - EAF victory
+	id = china_BD_news.6
+	title = china_BD_news.6.t
+	desc = china_BD_news.6.d
+	picture = GFX_BD_eaf_4AW_victory
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = china_BD_news.6.a
+		ai_chance = {
+			factor = 100
+		}
+		}
+}
+country_event = { #Formation of African Cominterm
+	id = china_BD_news.7
+	title = china_BD_news.7.t
+	desc = china_BD_news.7.d
+	picture = GFX_BD_rcg_victory
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { 
+		name = china_BD_news.7.a
+		ai_chance = {
+			factor = 100
+		}
+		}
 }

@@ -2077,6 +2077,10 @@ focus_tree = {
                     days = 100
                     random_days = 50
                 }
+                country_event = {
+                    id = china_BD.99
+                    days = 7
+                }
                 add_ideas = PRC_chen_quanguo_hog
                 add_ideas = PRC_qing_gang_for
                 add_ideas = PRC_han_wenxiu_eco

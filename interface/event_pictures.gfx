@@ -28,4 +28,59 @@ spriteTypes = {
 		name = "GFX_very_bad_news_BD"
 		texturefile = "gfx/event_pictures/PRC_TaoistMarch.png"
 	}
+
+	spriteType = {
+		name = "GFX_BD_helpethiopia"
+		texturefile = "gfx/event_pictures/BD_helpethiopia.png"
+	}
+
+	spriteType = {
+		name = "GFX_BD_eaf_4AW_victory"
+		texturefile = "gfx/event_pictures/BD_eaf_4AW_victory.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BD_rcg_victory"
+		texturefile = "gfx/event_pictures/BD_rcg_victory.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BD_rcg_eaf_war"
+		texturefile = "gfx/event_pictures/BD_rcg_eaf_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BD_actualrcgwin"
+		texturefile = "gfx/event_pictures/BD_actualrcgwin.png"
+	}
+
+	spriteType = {
+		name = "GFX_BD_china_dominance"
+		texturefile = "gfx/event_pictures/BD_china_dominance.dds"
+	}
+
+	spriteType = {
+		name = "GFX_BD_chinadominance"
+		texturefile = "gfx/event_pictures/BD_chinadominance.png"
+	}
+
+	spriteType = {
+		name = "GFX_BD_rcg_eaf_war"
+		texturefile = "gfx/event_pictures/BD_rcg_eaf_war.png"
+	}
+
+	spriteType = {
+		name = "GFX_GFX_BD_eaf_4AW_victory"
+		texturefile = "gfx/event_pictures/GFX_BD_eaf_4AW_victory.png"
+	}
+
+	spriteType = {
+		name = "GFX_GFX_BD_actualrcgwin"
+		texturefile = "gfx/event_pictures/GFX_BD_actualrcgwin.png"
+	}
+
+	spriteType = {
+		name = "GFX_GFX_BD_rcg_victory"
+		texturefile = "gfx/event_pictures/GFX_BD_rcg_victory.png"
+	}
 }

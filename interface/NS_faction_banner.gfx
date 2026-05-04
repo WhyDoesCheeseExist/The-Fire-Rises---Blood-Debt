@@ -3,4 +3,8 @@ spriteTypes = {
 		name = "GFX_NS_faction_bannerNS_Faction"
 		texturefile = "gfx/interface/decisions/NS_Faction.png"
 	}
+	spriteType = {
+		name = "GFX_BD_pax_sinofica_decision_cat"
+		texturefile = "gfx/interface/decisions/PS_decision_category_picture.png"
+	}	
 }

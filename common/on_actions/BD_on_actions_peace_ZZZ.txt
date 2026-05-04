@@ -76,7 +76,166 @@
 					}
 					set_global_flag = skip_default_capitulation
 				}
+				if = {
+					# Commie Congo Victory against EAF
+					limit = {
+						FROM = {
+								original_tag = RCG
+						}
+						ROOT = {
+								original_tag = TZN
+						}
+					}
+					FROM = {
+						IF = {
+							LIMIT = {
+								ROOT = {
+									is_in_faction = yes
+								}
+							}
+							ROOT = {
+								leave_faction = yes
+							}
+						}
+						white_peace = ROOT
+						
+						transfer_state = 345
+						transfer_state = 345
+						transfer_state = 762
+						transfer_state = 1348
+						transfer_state = 1345
+						transfer_state = 1351
+						transfer_state = 1344
+						
+						add_state_core = 345
+						add_state_core = 345
+						add_state_core = 762
+						add_state_core = 1348
+						add_state_core = 1345
+						add_state_core = 1351
+						add_state_core = 1344
+						create_faction = ANG_Afrocom
+						hidden_effect = {
+							remove_faction_goal = faction_goal_the_atomic_race
+							add_faction_goal = faction_goal_placeholder_long_term
+							remove_faction_goal = faction_goal_a_military_base
+							add_faction_goal = faction_goal_placeholder_medium_term
+							add_faction_goal = faction_goal_placeholder_short_term
+							}
+							add_to_faction = TZN
+					}
+					ROOT = {
+							set_politics = {
+							ruling_party = communist
+							elections_allowed = no
+						}
+							create_country_leader = {
+						name = TZN_federation_council_char
+						picture = "TZN_federation_council.dds"
+						ideology = left_wing_junta
+						}
+						set_cosmetic_tag = TZN_federation_socialist
+						}
+					news_event = china_BD_news.5
+					set_global_flag = skip_default_capitulation
+				}
+				if = {
+					# EAF Victory against Commie Congo
+					limit = {
+						FROM = {
+								original_tag = TZN
+						}
+						ROOT = {
+								original_tag = RCG
+						}
+					}
+					FROM = {
+						IF = {
+							LIMIT = {
+								ROOT = {
+									is_in_faction = yes
+								}
+							}
+							ROOT = {
+								leave_faction = yes
+							}
+						}
+						white_peace = ROOT
+						puppet = M23
+						puppet = DRO
+					}
+					ZZZ = {
+					annex_country = {
+						target = ROOT
+						transfer_troops = no
+					}
+					}
+						M23 = {
+								transfer_state = 718
+								transfer_state = 1357
+								transfer_state = 1356
+								transfer_state = 862
+								set_cosmetic_tag = M23_EAF_northern_zone
+								set_politics = {
+									ruling_party = conservative
+									last_election = "2021.11.8"
+									election_frequency = 48
+									elections_allowed = no
+								}
+								create_country_leader = {
+									name = TZN_venance_salvatory_mabeyo_char
+									picture = GFX_portrait_TZN_venance_salvatory_mabeyo
+									ideology = supervised_democracy
+								}
+								set_popularities = {
+									conservative = 44
+									authoritarian_democrat = 28
+									nationalist = 28
+								}
+								set_party_name = {
+									ideology = conservative
+									long_name = EAF_occupation_long
+									name = EAF_occupation_short
+								}
+								every_owned_state = {
+									set_demilitarized_zone = yes
+								}
+								change_government_type_military_dictatorship = yes
+							}
+							DRO = {
+								transfer_state = 863
+								transfer_state = 862
+								transfer_state = 864
+								set_cosmetic_tag = DRO_EAF_kivu_zone
+								create_country_leader = {
+									name = TZN_salum_haji_othman_char
+									picture = GFX_portrait_TZN_salum_haji_othman
+									ideology = supervised_democracy
+								}
+								set_popularities = {
+									conservative = 44
+									authoritarian_democrat = 28
+									nationalist = 28
+								}
+								set_party_name = {
+									ideology = conservative
+									long_name = EAF_occupation_long
+									name = EAF_occupation_short
+								}
+								set_politics = {
+									ruling_party = conservative
+									last_election = "2021.11.8"
+									election_frequency = 48
+									elections_allowed = no
+								}
+								every_owned_state = {
+									set_demilitarized_zone = yes
+								}
+								change_government_type_military_dictatorship = yes
+							}
+					news_event = china_BD_news.6
+					set_global_flag = skip_default_capitulation
+				}
 			}
 		}
-	}
-			
+	}			

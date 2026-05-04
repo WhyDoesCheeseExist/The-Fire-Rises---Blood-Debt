@@ -3,4 +3,14 @@ spriteTypes = {
 		name = "GFX_AFG_PRC_BOD"
 		texturefile = "gfx/leaders/ResourceExtractionLeader.dds"
 	}
+
+	spriteType = {
+		name = "GFX_ETH_PRC_BOD"
+		texturefile = "C:\Users\Conor\OneDrive\Documents\Paradox Interactive\Hearts of Iron IV\mod\TFRBD\gfx\leaders\China_Cyberpunk.png"
+	}
+
+	spriteType = {
+		name = "GFX_SOM_PRC_BOD"
+		texturefile = "C:\Users\Conor\OneDrive\Documents\Paradox Interactive\Hearts of Iron IV\mod\TFRBD\gfx\leaders\ChinaEthiopiaOccupation.png"
+	}
 }

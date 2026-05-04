@@ -1,4 +1,4 @@
-version="1.17.3"
+version="1.0"
 tags={
 	"Alternative History"
 	"Events"
@@ -14,5 +14,5 @@ dependencies={
 	"The Fire Rises"
 }
 name="The Fire Rises: Blood Debt (Revanchist China Expansion)"
-supported_version="1.17.3.0"
+supported_version="1.18.*.0"
 remote_file_id="3655163684"
