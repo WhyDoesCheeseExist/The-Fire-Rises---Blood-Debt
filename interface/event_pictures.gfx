@@ -83,4 +83,9 @@ spriteTypes = {
 		name = "GFX_GFX_BD_rcg_victory"
 		texturefile = "gfx/event_pictures/GFX_BD_rcg_victory.png"
 	}
+
+	spriteType = {
+		name = "GFX_BD_sinohydrotakeover"
+		texturefile = "gfx/event_pictures/BD_sinohydrotakeover.png"
+	}
 }

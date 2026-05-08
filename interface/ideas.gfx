@@ -5,32 +5,32 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ETH_chinese_investments_2Heavy_Chinese_Investments"
-		texturefile = "gfx/interface/ideas/PRC/Heavy_Chinese_Investments.dds"
+		name = "GFX_idea_ETH_chinese_investments_2"
+		texturefile = "gfx/interface/ideas/PRC/Heavy_Chinese_Investments.png"
 	}
 
 	spriteType = {
-		name = "GFX_PRC_BD_EAF_victory3AWvictory"
-		texturefile = "gfx/interface/ideas/PRC/3AWvictory.dds"
+		name = "GFX_idea_PRC_BD_EAF_victory"
+		texturefile = "gfx/interface/ideas/PRC/3AWvictory.png"
 	}
 
 	spriteType = {
-		name = "GFX_RCG_mil_strat_from_ETH_warChinese_Esxperience_in_the_Congo"
-		texturefile = "gfx/interface/ideas/PRC/Chinese_Esxperience_in_the_Congo.dds"
+		name = "GFX_idea_RCG_mil_strat_from_ETH_war"
+		texturefile = "gfx/interface/ideas/PRC/Chinese_Esxperience_in_the_Congo.png"
 	}
 
 	spriteType = {
-		name = "GFX_PRC_BD_EAF_RCG_victory3AW+4AWvictory"
-		texturefile = "gfx/interface/ideas/PRC/3AW+4AWvictory.dds"
+		name = "GFX_idea_PRC_BD_EAF_RCG_victory"
+		texturefile = "gfx/interface/ideas/PRC/3AW+4AWvictory.png"
 	}
 
 	spriteType = {
-		name = "GFX_ETH_company_with_state Company_With_A_State"
-		texturefile = "gfx/interface/ideas/PRC/Company_With_A_State.dds"
+		name = "GFX_idea_ETH_company_with_state"
+		texturefile = "gfx/interface/ideas/PRC/Company_With_A_State.png"
 	}
 
 	spriteType = {
-		name = "GFX_PRC_pax_sinofica_iconPax_sinofica_China"
-		texturefile = "gfx/interface/ideas/PRC/Pax_sinofica_China.dds"
+		name = "GFX_idea_PRC_pax_sinofica_iconPax_sinofica_China"
+		texturefile = "gfx/interface/ideas/PRC/Pax_sinofica_China.png"
 	}
 }

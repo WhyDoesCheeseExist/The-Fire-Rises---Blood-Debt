@@ -6,11 +6,15 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_ETH_PRC_BOD"
-		texturefile = "C:\Users\Conor\OneDrive\Documents\Paradox Interactive\Hearts of Iron IV\mod\TFRBD\gfx\leaders\China_Cyberpunk.png"
+		texturefile = "gfx\leaders\China_Cyberpunk.dds"
 	}
 
 	spriteType = {
 		name = "GFX_SOM_PRC_BOD"
-		texturefile = "C:\Users\Conor\OneDrive\Documents\Paradox Interactive\Hearts of Iron IV\mod\TFRBD\gfx\leaders\ChinaEthiopiaOccupation.png"
+		texturefile = "gfx\leaders\ChinaEthiopiaOccupation.dds"
+	}
+		spriteType = {
+		name = "GFX_EAF_RCG_BOD"
+		texturefile = "gfx\leaders\EastAfricaSocialist.dds"
 	}
 }

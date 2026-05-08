@@ -266,7 +266,7 @@ PRC_afraid_eyes_but_hands = {
 }
 PRC_BD_pax_sinofica = {
 PRC_volunter_increase_time = {
-		icon = generic_coronavirus
+		icon = GFX_PRC_soliders
 		allowed = {
 			tag = PRC
 		}
@@ -274,11 +274,12 @@ PRC_volunter_increase_time = {
 			has_country_flag = PRC_BD_pax_sinofcica_unlock
 		}
 		available = {
+		command_power > 50
 		}
 		custom_cost_trigger = {
     		command_power > 50
 		}
-		custom_cost_text = BD_cost_CP_15
+		custom_cost_text = BD_cp_50
 		days_remove = 365
 		modifier = {
 			command_power_gain = -0.1
@@ -286,12 +287,12 @@ PRC_volunter_increase_time = {
 			air_volunteer_cap = 5
 		}
 		complete_effect = {
+		add_command_power = -50
 	}
 		remove_effect = {
 }
 }
 PRC_BD_title_third_african_war = {
-		icon = generic_coronavirus
 		allowed = {
 			tag = PRC
 		}
@@ -308,7 +309,7 @@ PRC_BD_title_third_african_war = {
 }
 }
 PRC_whatever_guns_we_have_spare = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_crossed_guns
 		allowed = {
 			tag = PRC
 		}
@@ -324,9 +325,14 @@ PRC_whatever_guns_we_have_spare = {
 			}	
 		}
 		custom_cost_trigger = {
-    		infantry_equipment > 1500
+		has_equipment = {
+    	infantry_equipment > 1500
+			}
+		has_equipment = {
+    	support_equipment > 500
+			}	
 		}
-		custom_cost_text = BD_cost_inf_1500
+		custom_cost_text = BD_1500inf_500support
 		days_remove = 21
 		complete_effect = {
 	}
@@ -349,7 +355,7 @@ PRC_whatever_guns_we_have_spare = {
 	}
 }
 PRC_motorized_support_incoming = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_trucks
 		allowed = {
 			tag = PRC
 		}
@@ -365,9 +371,14 @@ PRC_motorized_support_incoming = {
 			}	
 		}
 		custom_cost_trigger = {
-    		motorized_equipment > 1000
+    			has_equipment = {
+    	motorized_equipment > 1000
+			}
+		has_equipment = {
+    	light_mechanized_equipment > 800
+			}	
 		}
-		custom_cost_text = BD_cost_mot_1000
+		custom_cost_text = BD_1000_truck_800_mech
 		days_remove = 30
 		complete_effect = {
 	}
@@ -391,7 +402,7 @@ PRC_motorized_support_incoming = {
 
 }
 PRC_bring_out_big_guns = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_tank
 		allowed = {
 			tag = PRC
 		}
@@ -407,9 +418,14 @@ PRC_bring_out_big_guns = {
 			}	
 		}
 		custom_cost_trigger = {
-    		modern_tank_chassis > 300
+ 		has_equipment = {
+    	modern_tank_chassis > 300
+			}
+		has_equipment = {
+    	mechanized_equipment > 500
+			}	
 		}
-		custom_cost_text = BD_cost_mbt_300
+		custom_cost_text = BD_cost_mbt_300_mech_500
 		days_remove = 40
 		complete_effect = {
 	}
@@ -432,7 +448,7 @@ PRC_bring_out_big_guns = {
 	}
 }
 PRC_brrrtttt_plane = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_air
 		allowed = {
 			tag = PRC
 		}
@@ -448,9 +464,14 @@ PRC_brrrtttt_plane = {
 			}	
 		}
 		custom_cost_trigger = {
-    		small_plane_airframe > 40
+		has_equipment = {
+    	small_plane_airframe > 40
+			}
+		has_equipment = {
+    	medium_plane_airframe > 25
+			}
 		}
-		custom_cost_text = BD_cost_pln_40
+		custom_cost_text = BD_cost_pln_40_tac_25
 		days_remove = 30
 		complete_effect = {
 	}
@@ -473,19 +494,21 @@ PRC_brrrtttt_plane = {
 	}
 }
 PRC_keep_chinese_companies_eth_happy = {
-		icon = generic_coronavirus
+		icon = GFX_SOV_china_investment
 		allowed = {
 			tag = PRC
 		}
 		visible = {
 			has_country_flag = PRC_BD_ETH_interest
 		}
-		available = {	
+		available = {
+		check_variable = {
+				income_var > 150
+			}		
 		}
 		custom_cost_trigger = {
     				check_variable = {
-				var = income_var
-				value = 150
+				income_var > 150
 			}	
 		}
 		custom_cost_text = dx_more_than_150B
@@ -508,7 +531,7 @@ PRC_keep_chinese_companies_eth_happy = {
 		}
 	}
 PRC_secure_ethiopia_permanently = {
-		icon = generic_coronavirus
+		icon = GFX_PRC_nationalist_decision
 		allowed = {
 			tag = PRC
 		}
@@ -520,7 +543,13 @@ PRC_secure_ethiopia_permanently = {
 		}
 		available = {	
 		}
-		cost = 50
+		custom_cost_trigger = {
+			has_political_power > 49
+		check_variable = {
+			income_var > 100
+		}
+		}
+		custom_cost_text = BD_cost_pp_50_100B
 		fire_only_once = yes
 		days_remove = 60
 		modifier = {
@@ -528,6 +557,7 @@ PRC_secure_ethiopia_permanently = {
 			command_power_gain = -0.25
 		}
 		complete_effect = {
+		add_political_power = -50
 		set_temp_variable = {
 				var = income_var_temp
 				value = -100
@@ -544,7 +574,7 @@ PRC_secure_ethiopia_permanently = {
 	}
 }	
 PRC_fund_EAF_military_integration = {
-		icon = generic_coronavirus
+		icon = FPR_Train_the_Insurgent_Army_decision
 		allowed = {
 			tag = PRC
 		}
@@ -575,7 +605,7 @@ PRC_fund_EAF_military_integration = {
 }
 }
 PRC_fund_EAF_political_integration = {
-		icon = generic_coronavirus
+		icon = generic_political_discourse
 		allowed = {
 			tag = PRC
 		}
@@ -586,6 +616,7 @@ PRC_fund_EAF_political_integration = {
 			TZN = {
 				has_idea = TZN_young_republic
 			}
+			has_army_experience > 15
 		}
 		fire_only_once = yes
 		cost = 100
@@ -600,7 +631,6 @@ PRC_fund_EAF_political_integration = {
 	}
 }
 PRC_BD_title_EAF_RCG_war = {
-		icon = generic_coronavirus
 		allowed = {
 			tag = PRC
 		}
@@ -619,7 +649,7 @@ PRC_BD_title_EAF_RCG_war = {
 }
 }
 PRC_fund_rapid_fire_reconstruction = {
-		icon = generic_coronavirus
+		icon = GFX_PRC_decision_fund_manufacturing_improvements
 		allowed = {
 			tag = PRC
 		}
@@ -629,9 +659,8 @@ PRC_fund_rapid_fire_reconstruction = {
 		available = {	
 		}
 		custom_cost_trigger = {
-    				check_variable = {
-				var = income_var
-				value = 40
+    	check_variable = {
+		income_var > 40
 			}	
 		}
 		custom_cost_text = dx_more_than_40B
@@ -658,7 +687,7 @@ PRC_fund_rapid_fire_reconstruction = {
 }
 }
 PRC_share_mil_strats_from_ETH_war = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_military
 		allowed = {
 			tag = PRC
 		}
@@ -668,11 +697,11 @@ PRC_share_mil_strats_from_ETH_war = {
 		available = {	
 		}
 		custom_cost_trigger = {
-			has_army_experience = >20
-			has_air_experience = >15
-			has_command_power = >50
+			army_experience = >50
+			air_experience = >15
+			command_power = >50
 		}
-		custom_cost_text = BD_cost_mil_exp_and_cp
+		custom_cost_text = decision_cost_CP_50_pp_50_ArmXP_50
 		fire_only_once = yes
 		days_remove = 30
 		modifier = {
@@ -688,11 +717,12 @@ PRC_share_mil_strats_from_ETH_war = {
 			RCG = {
 			add_ideas = RCG_mil_strat_from_ETH_war
 			add_army_experience = 20
+			add_air_experience = 10
 		}
 }
 }
 PRC_whatever_guns_we_have_spare_RCG = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_crossed_guns
 		allowed = {
 			tag = PRC
 		}
@@ -708,9 +738,14 @@ PRC_whatever_guns_we_have_spare_RCG = {
 			}	
 		}
 		custom_cost_trigger = {
-    		infantry_equipment > 2000
+    				has_equipment = {
+    	infantry_equipment > 2000
+			}
+		has_equipment = {
+    	support_equipment > 750
+			}	
 		}
-		custom_cost_text = BD_cost_inf_2000
+		custom_cost_text = BD_2000inf_750support
 		days_remove = 21
 		complete_effect = {
 	}
@@ -733,7 +768,7 @@ PRC_whatever_guns_we_have_spare_RCG = {
 	}
 }
 PRC_motorized_support_incoming_RCG = {
-		icon = generic_coronavirus
+		icon = decision_generic_trucks
 		allowed = {
 			tag = PRC
 		}
@@ -749,9 +784,12 @@ PRC_motorized_support_incoming_RCG = {
 			}	
 		}
 		custom_cost_trigger = {
-    		motorized_equipment > 1250
+					has_equipment = {
+    motorized_equipment > 1250
+	light_mechanized_equipment > 1000
+	}
 		}
-		custom_cost_text = BD_cost_mot_1250
+		custom_cost_text = BD_1250_truck_1000_mech
 		days_remove = 30
 		complete_effect = {
 	}
@@ -775,7 +813,7 @@ PRC_motorized_support_incoming_RCG = {
 
 }
 PRC_bring_out_big_guns_RCG = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_tank
 		allowed = {
 			tag = PRC
 		}
@@ -792,8 +830,12 @@ PRC_bring_out_big_guns_RCG = {
 		}
 		custom_cost_trigger = {
     		modern_tank_chassis > 300
+		has_equipment = {
+    modern_tank_chassis > 300
+	mechanized_equipment > 750
+	}
 		}
-		custom_cost_text = BD_cost_mbt_300
+		custom_cost_text = BD_cost_mbt_300_mech_750
 		days_remove = 40
 		complete_effect = {
 	}
@@ -816,7 +858,7 @@ PRC_bring_out_big_guns_RCG = {
 	}
 }
 PRC_brrrtttt_plane_RCG = {
-		icon = generic_coronavirus
+		icon = GFX_decision_generic_air
 		allowed = {
 			tag = PRC
 		}
@@ -832,9 +874,12 @@ PRC_brrrtttt_plane_RCG = {
 			}	
 		}
 		custom_cost_trigger = {
-    		small_plane_airframe > 40
+			has_equipment = {
+    small_plane_airframe > 40
+	medium_plane_airframe > 25
+}
 		}
-		custom_cost_text = BD_cost_pln_40
+		custom_cost_text = BD_cost_pln_40_tac_25
 		days_remove = 30
 		complete_effect = {
 	}
@@ -857,22 +902,26 @@ PRC_brrrtttt_plane_RCG = {
 	}
 }
 PRC_incite_seperatist_unrest = {
-		icon = generic_coronavirus
+		icon = generic_propaganda_campaigns
 		allowed = {
 			tag = PRC
 		}
 		visible = {
 			has_country_flag = PRC_BD_RCG_interest
 		}
-		available = {
-			has_command_power = 50
+		custom_cost_trigger = {
+			command_power > 49
+			political_power > 34
 		}
+		custom_cost_text = BD_35pp_and_50cp_cost
 		cost = 35
 		days_remove = 30
 		complete_effect = {
 			add_command_power = -50
+			add_political_power = -35
 	}
 		remove_effect = {
+			add_command_power = 25
 			TZN = {
 			add_stability = -0.1
 			add_war_support = -0.15	
@@ -880,7 +929,7 @@ PRC_incite_seperatist_unrest = {
 	}
 }
 PRC_treaty_with_RCG = {
-		icon = generic_coronavirus
+		icon = GFX_PRC_new_left_decision
 		allowed = {
 			tag = PRC
 		}

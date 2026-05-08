@@ -6,6 +6,15 @@ PRC_NS_china_initial = {
 	color = rgb { 97 1 15 }
 	color_ui = rgb { 40 35 15 }
 }
+ETH_nat_china  = {
+	color = rgb { 49 47 64 }
+	color_ui = rgb { 40 35 15 }
+}
+SOM_nat_china = {
+	color = rgb { 56 11 8 }
+	color_ui = rgb { 40 35 15 }
+}
+
 PDF_burma = {
 	color = rgb { 214 50 59 }
 	color_ui = rgb { 214 50 59 }

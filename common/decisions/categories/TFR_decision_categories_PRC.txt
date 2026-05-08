@@ -644,8 +644,8 @@ PRC_BD_faction_system = {
     }
 }
 PRC_BD_pax_sinofica = {
-    icon = GFX_PRC_pax_sinofica_iconPax_sinofica_China
-	picture = GFX_BD_pax_sinofica_decision_cat
+    icon = GFX_PS_decision_cat_icon
+	picture = GFX_PS_decision_cat_image
     visible_when_empty = yes
     priority = 1
 

@@ -131,7 +131,7 @@
 						}
 							create_country_leader = {
 						name = TZN_federation_council_char
-						picture = "TZN_federation_council.dds"
+						picture = "GFX_EAF_RCG_BOD"
 						ideology = left_wing_junta
 						}
 						set_cosmetic_tag = TZN_federation_socialist

@@ -15,4 +15,13 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/NS_Faction.png"
 		legacy_lazy_load = no
 	}
+
+	spriteType = {
+		name = "GFX_PS_decision_cat_icon"
+		texturefile = "gfx/interface/decisions/Pax_sinofica_China.png"
+	}
+	spriteType = {
+		name = "GFX_PS_decision_cat_image"
+		texturefile = "gfx/interface/decisions/PLASoldiersPropoganda.png"
+	}	
 }

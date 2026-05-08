@@ -270,7 +270,7 @@ country_event = { #Pax Sinofica decision category unlocks
 	id = china_BD.99
 	title = china_BD.99.t
 	desc = china_BD.99.d
-	picture = GFX_BD_china_dominance
+	picture = GFX_BD_chinadominance
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { 
@@ -410,6 +410,16 @@ country_event = { #ohhh Ethiropria spent all money on dam...now we are homress..
 		ai_chance = {
 			factor = 100
 		}
+		PRC = {
+			add_to_faction = ETH
+			add_to_faction = SOM
+		set_autonomy = {
+   			target = SOM
+    		autonomous_state = autonomy_supervised_state
+			end_wars = no
+    		end_civil_wars = no
+			}
+		}
 		ETH = {
 					set_cosmetic_tag = ETH_nat_china
 					add_ideas = {
@@ -440,6 +450,7 @@ country_event = { #ohhh Ethiropria spent all money on dam...now we are homress..
 				}
 		SOM = {
 					set_cosmetic_tag = SOM_nat_china
+					remove_ideas = SOM_failed_state
 					set_politics = {
 						ruling_party = nationalist
 						elections_allowed = no
@@ -463,16 +474,6 @@ country_event = { #ohhh Ethiropria spent all money on dam...now we are homress..
 						}
 					}
 
-		}
-		PRC = {
-			add_to_faction = ETH
-			add_to_faction = SOM
-		set_autonomy = {
-   			target = SOM
-    		autonomous_state = autonomy_supervised_state
-			end_wars = no
-    		end_civil_wars = no
-			}
 		}
 				news_event = {
 					id = china_BD_news.4
@@ -539,7 +540,7 @@ news_event = {
 	id = china_BD_news.4
 	title = china_BD_news.4.t
 	desc = china_BD_news.4.d
-	picture = GFX_PRC_invade_AFG_news
+	picture = GFX_BD_sinohydrotakeover
 	is_triggered_only = yes
 	option = {
 		trigger = {
@@ -557,14 +558,14 @@ news_event = {
 	}
 }
 news_event = { #EAF Victory - EAF invades Congo
-	id = china_BD_news.4
-	title = china_BD_news.4.t
-	desc = china_BD_news.4.d
+	id = china_BD_news.5
+	title = china_BD_news.5.t
+	desc = china_BD_news.5.d
 	picture = GFX_BD_rcg_eaf_war
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { 
-		name = china_BD_news.4.a
+		name = china_BD_news.5.a
 		ai_chance = {
 			factor = 100
 		}
@@ -580,18 +581,18 @@ news_event = { #EAF Victory - EAF invades Congo
 		}
 		custom_effect_tooltip = PRC_BD_support_RCG_tt
 		set_country_flag = PRC_BD_RCG_interest
-		name = china_BD_news.4.b
+		name = china_BD_news.5.b
 	}
 }
 news_event = { #RCG-EAF War - RCG victory
-	id = china_BD_news.5
-	title = china_BD_news.5.t
-	desc = china_BD_news.5.d
-	picture = GFX_BD_actualrcgwin
+	id = china_BD_news.6
+	title = china_BD_news.6.t
+	desc = china_BD_news.6.d
+	picture = GFX_GFX_BD_actualrcgwin
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { 
-		name = china_BD_news.5.a
+		name = china_BD_news.6.a
 		ai_chance = {
 			factor = 100
 		}
@@ -610,33 +611,40 @@ news_event = { #RCG-EAF War - RCG victory
 		 remove_idea = PRC_BD_EAF_victory_fake
     		add_idea = PRC_BD_EAF_RCG_victory_fake
 		}
-		name = china_BD_news.5.b
+		hidden_effect = {
+			remove_idea = PRC_BD_EAF_victory
+    		add_timed_idea = {
+				PRC_BD_EAF_RCG_victory
+				days = 175
+			}
+		}
+		name = china_BD_news.6.b
 	}
 }
 }
-country_event = { #RCG-EAF War - EAF victory
-	id = china_BD_news.6
-	title = china_BD_news.6.t
-	desc = china_BD_news.6.d
-	picture = GFX_BD_eaf_4AW_victory
+news_event = { #RCG-EAF War - EAF victory
+	id = china_BD_news.7
+	title = china_BD_news.7.t
+	desc = china_BD_news.7.d
+	picture = GFX_GFX_BD_eaf_4AW_victory
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { 
-		name = china_BD_news.6.a
+		name = china_BD_news.7.a
 		ai_chance = {
 			factor = 100
 		}
 		}
 }
-country_event = { #Formation of African Cominterm
-	id = china_BD_news.7
-	title = china_BD_news.7.t
-	desc = china_BD_news.7.d
-	picture = GFX_BD_rcg_victory
+news_event = { #Formation of African Cominterm
+	id = china_BD_news.8
+	title = china_BD_news.8.t
+	desc = china_BD_news.8.d
+	picture = GFX_GFX_BD_rcg_victory
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { 
-		name = china_BD_news.7.a
+		name = china_BD_news.8.a
 		ai_chance = {
 			factor = 100
 		}
